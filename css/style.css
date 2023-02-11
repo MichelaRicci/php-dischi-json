@@ -1,0 +1,22 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Generics */
+
+body {
+    background-color: #1d2d3c;
+}
+
+/* Header */
+
+header {
+    background-color: #06131f;
+}
+
+#logo {
+    height: 50px;
+}
