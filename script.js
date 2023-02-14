@@ -1,5 +1,7 @@
 console.log('Vue Ok', Vue);
 
+const apiUrl = 'http://localhost:8888/php-dischi-json/api.php';
+
 const app = Vue.createApp({
 
 
@@ -9,8 +11,15 @@ const app = Vue.createApp({
         }
 
     },
+
+    methods: {
+        fetchApi(endpoint, target) {
+            axios.get(endpoint).then(res => this[target] = res.data)
+        }
+    },
+
     created() {
-        axios.get('http://localhost/php-dischi-json/api.php').then(res => this.discs = res.data)
+        this.fetchApi(apiUrl, 'discs');
     }
 })
 
