@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -13,7 +14,6 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 
-
     <!-- Axios -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.3/axios.min.js'
         integrity='sha512-wS6VWtjvRcylhyoArkahZUkzZFeKB7ch/MHukprGSh1XIidNvHG1rxPhyFnL73M0FC1YXPIXLRDAoOyRJNni/g=='
@@ -21,8 +21,10 @@
 
     <!-- VUE -->
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+
     <!-- JS -->
     <script defer src="script.js"></script>
+
 
 
     <title>Dischi</title>
@@ -39,11 +41,13 @@
 
         <main>
             <div class="container">
-                <div v-for="disc in discs">
-                    <img :src="disc.poster" :alt="disc.title">
-                    <h3>{{ disc.title }}</h3>
-                    <h6>{{ disc.author}}</h6>
-                    <h4>{{ disc.year }}</h4>
+                <div class="card-container row p-5">
+                    <div class="col-3 text-white text-center card-disc rounded-3" v-for="disc in discs">
+                        <figure><img class="img-fluid" :src="disc.poster" :alt="disc.title"></figure>
+                        <h5>{{ disc.title }}</h5>
+                        <p>{{ disc.author}}</p>
+                        <h5>{{ disc.year }}</h5>
+                    </div>
                 </div>
             </div>
         </main>

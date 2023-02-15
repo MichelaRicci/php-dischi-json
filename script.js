@@ -1,6 +1,6 @@
 console.log('Vue Ok', Vue);
 
-const apiUrl = 'http://localhost:8888/php-dischi-json/api.php';
+const apiUrl = 'http://localhost/php-dischi-json/api.php';
 
 const app = Vue.createApp({
 

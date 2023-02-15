@@ -9,6 +9,7 @@
 
 body {
     background-color: #1d2d3c;
+    color: #ffffff;
 }
 
 /* Header */
@@ -19,4 +20,19 @@ header {
 
 #logo {
     height: 50px;
+}
+
+/* Gallery */
+
+
+.card-disc {
+    background-color: #102030;
+    flex-basis: calc(30% - 40px);
+    margin: 40px;
+    padding: 30px;
+}
+
+
+.card-disc img {
+    width: 90%;
 }
